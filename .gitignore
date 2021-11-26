@@ -1,2 +1,5 @@
 proj
 /pfft/pfft
+/chnn_rcvr/ip
+*.dat
+*.coe
