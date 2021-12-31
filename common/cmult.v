@@ -8,15 +8,15 @@
 //  The style described uses 3 DSP's to implement the complex multiplier
 //  taking advantage of the pre-adder, so widths chosen should be less than what the architecture supports or else extra-logic/extra DSPs will be inferred
 module cmult # (
-                parameter AWIDTH = 16, // size of 1st input of multiplier
-                          BWIDTH = 18  // size of 2nd input of multiplier
-               )
-               (
-                input clk,
-                input signed [AWIDTH-1:0] 	    ar, ai,
-                input signed [BWIDTH-1:0] 	    br, bi,
-                output signed [AWIDTH+BWIDTH:0] pr, pi
-                );
+    parameter AWIDTH = 16, // size of 1st input of multiplier
+    parameter BWIDTH = 18  // size of 2nd input of multiplier
+    )
+    (
+    input clk,
+    input signed [AWIDTH-1:0] 	    ar, ai,
+    input signed [BWIDTH-1:0] 	    br, bi,
+    output signed [AWIDTH+BWIDTH:0] pr, pi
+    );
 
 reg signed [AWIDTH-1:0]	ai_d, ai_dd, ai_ddd, ai_dddd;
 reg signed [AWIDTH-1:0]	ar_d, ar_dd, ar_ddd, ar_dddd;

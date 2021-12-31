@@ -3,3 +3,10 @@ proj
 /chnn_rcvr/ip
 *.dat
 *.coe
+*.cache
+*.hw
+*.ip_user_files
+*.sim
+*.runs
+*.xpr
+__pycache__

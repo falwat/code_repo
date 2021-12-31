@@ -52,7 +52,20 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
+/*
+pfft #(
+    .FFT_ORDER(4), // {1:2, 2:4,3:8,4:16,5:32,6:64} FFT_ORDER = log2(N)
+    .COMPLEX_DWIDTH(32)
+    ) instance_name (
+    .aclk(aclk),
+    .aresetn(aresetn),
+    .scale_sch(scale_sch),
+    .s_axis_tvalid(s_axis_tvalid),
+    .s_axis_tdata(s_axis_tdata),
+    .m_axis_tvalid(m_axis_tvalid),
+    .m_axis_tdata(m_axis_tdata),
+    );
+ */
 
 module pfft #(
     parameter FFT_ORDER = 4, // {1:2, 2:4,3:8,4:16,5:32,6:64} FFT_ORDER = log2(N)
